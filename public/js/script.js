@@ -115,3 +115,11 @@ function changeLanguage() {
         successMessage.textContent = "Yepppie, see you sooonnn :3";
     }
 }
+const music = document.getElementById("bg-music");
+
+// Start music on first user interaction
+document.addEventListener("click", function startMusic() {
+    music.play();
+    document.removeEventListener("click", startMusic);
+});
+
